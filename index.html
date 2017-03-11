@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app nxmlns="http://www.w3.g-app org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+  <title>QR code</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <meta name="description" content="QR Code Zika - Crie seu QR Code rapidão e free. 1 - Digite sua URL (voce tambem pode armazenar textos). 2 - Aperte enter e pronto! 3 - YEEEAH! Agora e so compartilhar e usar.">
+  <link rel="canonical" href="http://gustavoquinalha.com/qrcode-zika">
+  <meta name="author" content="Gustavo Quinalha">
+  <meta name="robots" content="index">
+
+  <meta property="og:title" content="QR Code Zika - Crie seu QR Code rapidão e free." />
+  <meta property="fb:app_id" content="1154262757941899" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://gustavoquinalha.com/qrcode-zika" />
+  <meta property="og:image" content="http://gustavoquinalha.com/qrcode-zika/img/rock.svg" />
+  <meta property="og:description" content="QR Code Zika - Crie seu QR Code rapidão e free. 1 - Digite sua URL (voce tambem pode armazenar textos). 2 - Aperte enter e pronto! 3 - YEEEAH! Agora e so compartilhar e usar." />
+  <meta property="og:site_name" content="Gustavo Quinalha" />
+  <meta property="fb:admins" content="100002787447461" />
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="QR Code Zika - Crie seu QR Code rapidão e free.a">
+  <meta name="twitter:description" content="Gustavo Quinalha - Web Developer e Designer Gráfico. Confira todos os meus desenhos e trabalhos.">
+  <meta name="twitter:creator" content="@gustavoquinalha">
+  <meta name="twitter:image" content="http://gustavoquinalha.com/qrcode-zika/img/rock.svg">
+
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="QR Code Zika - Crie seu QR Code rapidão e free.">
+  <meta itemprop="description" content="Gustavo Quinalha - Web Developer e Designer Gráfico. Confira todos os meus desenhos e trabalhos.">
+  <meta itemprop="image" content="http://gustavoquinalha.com/qrcode-zika/img/rock.svg">
+
+  <link rel="stylesheet" href="css/bichinhos.css">
+
+</head>
+<body>
+  <div class="bg">
+  <div class="texto">
+    <img src="img/logo.svg" width="150" alt="">
+    <h1>O jeitinho mais fofinho de manter seu bichinho seguro.</h1>
+  </div>
+
+  </div>
+
+
+  <div id="svg">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
+      <g id="qrcode" />
+    </svg>
+
+
+    <p>Nome: <input type="text" ng-model="name"></p>
+    <p>Raça: <input type="text" ng-model="raca"></p>
+    <p>sexo: <input type="text" ng-model="sexo"></p>
+    <p>You wrote: {{ name + raca + sexo }}</p>
+
+
+    <input id="text" class="inp" type="text" value="http://gustavoquinalha.com" ng-model="name + raca + sexo" placeholder="Ex: gustavoquinalha.com" />
+<!--input id="text" class="inp" type="text" value="http://gustavoquinalha.com" ng-model="yourUrl" placeholder="Ex: gustavoquinalha.com" /-->
+
+
+
+    <canvas id="canvas" width="300px" height="300px"></canvas>
+
+
+
+
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/qrcode.js"></script>
+    <script type="text/javascript" src="js/rgbcolor.js"></script>
+    <script type="text/javascript" src="js/canvg.js"></script>
+    <script type="text/javascript">
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+        width: 300,
+        height: 300,
+        useSVG: true
+      });
+
+      function makeCode() {
+        var elText = document.getElementById("text");
+
+        if (!elText.value) {
+          //alert("Digite um texto");
+          elText.focus();
+          return;
+        }
+
+        qrcode.makeCode(elText.value);
+        //alert("criado");
+
+        //event.preventDefault();
+
+        //Convertendo svg em canvas
+        var canvas = document.getElementById("canvas");
+        var svg = $("#svg").html().replace(/>\s+/g, ">").replace(/\s+</g, "<").replace(" xlink=", " xmlns:xlink=").replace(/\shref=/g, " xlink:href=");
+        canvg(canvas, svg);
+        //alert("convert to canvas");
+
+        //Convertendo canvas em png
+        var data = canvas.toDataURL("image/png");
+        $('#imagem').attr('src', data);
+        $('#canvas').hide();
+
+
+        //alert("convert to png");
+
+      }
+
+      makeCode();
+
+
+      $("#text").
+      on("blur", function() {
+        makeCode();
+      }).
+      on("keydown", function(e) {
+        if (e.keyCode == 13) {
+          makeCode();
+        }
+      });
+    </script>
+
+</body>
+
+</html>
