@@ -6,6 +6,7 @@
   padding:0;
   text-align: center;
   font-family: 'Roboto Slab', sans-serif;
+text-align: center;
 }
 a {
   text-decoration: none;
@@ -16,14 +17,20 @@ html,body {
   position: relative;
   height: 100%;
 }
+.logo {
+width: 150px;
+}
+.intro {
+width: 400px;
+}
 .bg {
-  width: 100%;
-  min-height: 100%;
-  background-color: #fff;
+width: 100%;
+min-height: 100%;
+background-color: #fff;
 background: #fff;
 background: url(../img/3.jpg) 100%;
 background-position: right bottom;
-background-size: contain;
+background-size: 60%;
 background-repeat: no-repeat;
 background-origin: border-box;
 display: flex;
@@ -33,14 +40,34 @@ color: #4680FF;
 
 }
 .texto{
-width: 800px;
+width: 500px;
 max-width: 90%;
 margin-left: 10%;
+display: flex;
+flex-direction: column;
+text-align: center!important;
+background: #;
 }
 .texto img {
 padding-bottom: 50px;
+margin: 0 auto;
 }
-.texto h1 {
-text-transform: uppercase;
-font-size: 48px
+
+
+@media only screen and (max-width: 480px) {
+  .logo {
+  width: 100px;
+  }
+  .intro {
+  width: 150px;
+  }
+  .bg {
+  min-height: 50%;
+  align-items: flex-start;
+background: #fff!important;
+  }
+  .texto{
+  padding-top: 50px;
+  margin: 0 auto!important;
+  }
 }
