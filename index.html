@@ -42,85 +42,85 @@
 
   </div>
 
-
-  <div id="svg">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
-      <g id="qrcode" />
-    </svg>
 <h1>O jeitinho mais fofinho de manter seu bichinho seguro.</h1>
-
-    <p>Nome: <input type="text" ng-model="name"></p>
-    <p>Raça: <input type="text" ng-model="raca"></p>
-    <p>sexo: <input type="text" ng-model="sexo"></p>
-    <p>You wrote: {{ name + raca + sexo }}</p>
-
-
-    <input id="text" class="inp" type="text" value="http://gustavoquinalha.com" ng-model="name + raca + sexo" placeholder="Ex: gustavoquinalha.com" />
-<!--input id="text" class="inp" type="text" value="http://gustavoquinalha.com" ng-model="yourUrl" placeholder="Ex: gustavoquinalha.com" /-->
-
-
-
-    <canvas id="canvas" width="300px" height="300px"></canvas>
-
-
-
-
-
-    <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/qrcode.js"></script>
-    <script type="text/javascript" src="js/rgbcolor.js"></script>
-    <script type="text/javascript" src="js/canvg.js"></script>
-    <script type="text/javascript">
-      var qrcode = new QRCode(document.getElementById("qrcode"), {
-        width: 300,
-        height: 300,
-        useSVG: true
-      });
-
-      function makeCode() {
-        var elText = document.getElementById("text");
-
-        if (!elText.value) {
-          //alert("Digite um texto");
-          elText.focus();
-          return;
-        }
-
-        qrcode.makeCode(elText.value);
-        //alert("criado");
-
-        //event.preventDefault();
-
-        //Convertendo svg em canvas
-        var canvas = document.getElementById("canvas");
-        var svg = $("#svg").html().replace(/>\s+/g, ">").replace(/\s+</g, "<").replace(" xlink=", " xmlns:xlink=").replace(/\shref=/g, " xlink:href=");
-        canvg(canvas, svg);
-        //alert("convert to canvas");
-
-        //Convertendo canvas em png
-        var data = canvas.toDataURL("image/png");
-        $('#imagem').attr('src', data);
-        $('#canvas').hide();
+<form class="">
+  <p>Nome: <input type="text" ng-model="name"></p>
+  <p>Raça: <input type="text" ng-model="raca"></p>
+  <p>sexo: <input type="text" ng-model="sexo"></p>
+  <input id="text" type="text" value="teste" ng-model="name + raca + sexo" placeholder="teste"/><br><br>
+  <button id="tey" type="button" name="button">TEY</button>
+</form>
+<div id="svg">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
+    <g id="qrcode"/>
+  </svg>
+</div>
+<br>
+<canvas id="canvas" width="300px" height="300px"></canvas><br>
+<img id="imagem" class="full" width="300px" height="300px"/>
 
 
-        //alert("convert to png");
 
-      }
 
+
+
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/qrcode.js"></script>
+<script type="text/javascript" src="js/rgbcolor.js"></script>
+<script type="text/javascript" src="js/canvg.js"></script>
+  <script type="text/javascript">
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+    width : 300,
+    height : 300,
+    useSVG: true
+  });
+
+  function makeCode () {
+    var elText = document.getElementById("text");
+
+    if (!elText.value) {
+      //alert("Digite um texto");
+      elText.focus();
+      return;
+    }
+
+    qrcode.makeCode(elText.value);
+    //alert("criado");
+
+    //event.preventDefault();
+
+    //Convertendo svg em canvas
+    var canvas = document.getElementById("canvas");
+    var svg = $("#svg").html().replace(/>\s+/g, ">").replace(/\s+</g, "<").replace(" xlink=", " xmlns:xlink=").replace(/\shref=/g, " xlink:href=");
+    canvg(canvas, svg);
+    //alert("convert to canvas");
+
+    //Convertendo canvas em png
+    var data = canvas.toDataURL("image/png");
+    $('#imagem').attr('src', data);
+    $('#canvas').hide();
+  }
+
+  makeCode();
+
+  $( "#tey" ).click(function() {
+    makeCode();
+  });
+
+  $("#text").
+  on("blur", function () {
+    makeCode();
+  }).
+  on("keydown", function (e) {
+    if (e.keyCode == 13) {
       makeCode();
+    }
+  });
 
+  </script>
 
-      $("#text").
-      on("blur", function() {
-        makeCode();
-      }).
-      on("keydown", function(e) {
-        if (e.keyCode == 13) {
-          makeCode();
-        }
-      });
-    </script>
 
 </body>
 
