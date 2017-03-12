@@ -59,6 +59,7 @@ margin: 0 auto;
   }
   .bg {
   height: 50%;
+  background: #fff!important
   }
   .texto{
   padding-top: 0px;
