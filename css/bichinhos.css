@@ -4,7 +4,6 @@
 * {
   margin:0;
   padding:0;
-  text-align: center;
   font-family: 'Roboto Slab', sans-serif;
 text-align: center;
 }
@@ -14,7 +13,6 @@ a {
 
 html,body {
   background: #fff;
-  position: relative;
   height: 100%;
 }
 .logo {
