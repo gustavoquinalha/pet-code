@@ -5,30 +5,30 @@
   <title>QR code</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-  <meta name="description" content="QR Code Zika - Crie seu QR Code rapidão e free. 1 - Digite sua URL (voce tambem pode armazenar textos). 2 - Aperte enter e pronto! 3 - YEEEAH! Agora e so compartilhar e usar.">
-  <link rel="canonical" href="http://gustavoquinalha.com/qrcode-zika">
-  <meta name="author" content="Gustavo Quinalha">
+  <meta name="description" content="Bichinhos - Qr pets">
+  <link rel="canonical" href="http://">
+  <meta name="author" content="bichinhos">
   <meta name="robots" content="index">
 
-  <meta property="og:title" content="QR Code Zika - Crie seu QR Code rapidão e free." />
+  <meta property="og:title" content="Bichinhos - Qr pets" />
   <meta property="fb:app_id" content="1154262757941899" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://gustavoquinalha.com/qrcode-zika" />
-  <meta property="og:image" content="http://gustavoquinalha.com/qrcode-zika/img/rock.svg" />
-  <meta property="og:description" content="QR Code Zika - Crie seu QR Code rapidão e free. 1 - Digite sua URL (voce tambem pode armazenar textos). 2 - Aperte enter e pronto! 3 - YEEEAH! Agora e so compartilhar e usar." />
-  <meta property="og:site_name" content="Gustavo Quinalha" />
+  <meta property="og:url" content="http://" />
+  <meta property="og:image" content="http://" />
+  <meta property="og:description" content="Bichinhos - Qr pets" />
+  <meta property="og:site_name" content="bichinhos" />
   <meta property="fb:admins" content="100002787447461" />
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="QR Code Zika - Crie seu QR Code rapidão e free.a">
-  <meta name="twitter:description" content="Gustavo Quinalha - Web Developer e Designer Gráfico. Confira todos os meus desenhos e trabalhos.">
+  <meta name="twitter:title" content="Bichinhos - Qr pets">
+  <meta name="twitter:description" content="Bichinhos - Qr pets">
   <meta name="twitter:creator" content="@gustavoquinalha">
-  <meta name="twitter:image" content="http://gustavoquinalha.com/qrcode-zika/img/rock.svg">
+  <meta name="twitter:image" content="http://">
 
   <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="QR Code Zika - Crie seu QR Code rapidão e free.">
-  <meta itemprop="description" content="Gustavo Quinalha - Web Developer e Designer Gráfico. Confira todos os meus desenhos e trabalhos.">
-  <meta itemprop="image" content="http://gustavoquinalha.com/qrcode-zika/img/rock.svg">
+  <meta itemprop="name" content="Bichinhos - Qr pets">
+  <meta itemprop="description" content="Bichinhos - Qr pets">
+  <meta itemprop="image" content="http://">
 
   <link rel="stylesheet" href="css/bichinhos.css">
 
@@ -36,7 +36,7 @@
 <body>
   <div class="bg">
   <div class="texto">
-    <img src="img/logo.svg" class="logo" alt="">
+    <img src="img/logo.svg" class="logo" alt=""><br>
     <img src="img/intro.svg" class="intro" width="300" alt="">
   </div>
 
@@ -70,56 +70,9 @@
 <script type="text/javascript" src="js/qrcode.js"></script>
 <script type="text/javascript" src="js/rgbcolor.js"></script>
 <script type="text/javascript" src="js/canvg.js"></script>
-  <script type="text/javascript">
-  var qrcode = new QRCode(document.getElementById("qrcode"), {
-    width : 300,
-    height : 300,
-    useSVG: true
-  });
+<script type="text/javascript" src="js/main.js">
 
-  function makeCode () {
-    var elText = document.getElementById("text");
-
-    if (!elText.value) {
-      //alert("Digite um texto");
-      elText.focus();
-      return;
-    }
-
-    qrcode.makeCode(elText.value);
-    //alert("criado");
-
-    //event.preventDefault();
-
-    //Convertendo svg em canvas
-    var canvas = document.getElementById("canvas");
-    var svg = $("#svg").html().replace(/>\s+/g, ">").replace(/\s+</g, "<").replace(" xlink=", " xmlns:xlink=").replace(/\shref=/g, " xlink:href=");
-    canvg(canvas, svg);
-    //alert("convert to canvas");
-
-    //Convertendo canvas em png
-    var data = canvas.toDataURL("image/png");
-    $('#imagem').attr('src', data);
-    $('#canvas').hide();
-  }
-
-  makeCode();
-
-  $( "#tey" ).click(function() {
-    makeCode();
-  });
-
-  $("#text").
-  on("blur", function () {
-    makeCode();
-  }).
-  on("keydown", function (e) {
-    if (e.keyCode == 13) {
-      makeCode();
-    }
-  });
-
-  </script>
+</script>
 
 
 </body>

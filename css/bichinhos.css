@@ -21,11 +21,11 @@ html,body {
 width: 150px;
 }
 .intro {
-width: 400px;
+width: 350px;
 }
 .bg {
 width: 100%;
-min-height: 100%;
+height: 100%;
 background-color: #fff;
 background: #fff;
 background: url(../img/3.jpg) 100%;
@@ -35,21 +35,19 @@ background-repeat: no-repeat;
 background-origin: border-box;
 display: flex;
 justify-content: flex-start;
-align-items: center;
+align-items:center;
 color: #4680FF;
+overflow: hidden;
 
 }
 .texto{
-width: 500px;
+width: 400px;
 max-width: 90%;
 margin-left: 10%;
-display: flex;
-flex-direction: column;
 text-align: center!important;
-background: #;
 }
 .texto img {
-padding-bottom: 50px;
+padding: 0;
 margin: 0 auto;
 }
 
@@ -62,7 +60,7 @@ margin: 0 auto;
   width: 150px;
   }
   .bg {
-  min-height: 50%;
+  height: 50%;
   align-items: flex-start;
 background: #fff!important;
   }
