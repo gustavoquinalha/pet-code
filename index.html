@@ -100,12 +100,12 @@
 
   <div class="tamanho cn">
   <div class="flex">
-    <div class="fle fe">
+    <div class="fle fe" id="forms" ng-hide="showm">
       <div class="nov">
         <div class="form">
           <form class="">
             <h2>Seus dados</h2>
-              <div class="forms" id="forms">
+              <div class="forms">
                 <div class="formu">
                     <span>Qual o seu nome?</span>
                     <input type="text" ng-model="nome" class="inp" placeholder="Nome">
@@ -149,7 +149,8 @@
                   </div>
 
                   <div class="formu">
-                    <button id="tey" type="button" name="button" class="btn">Gerar QR Pet</button>
+                    <button id="tey" ng-model="myVar" ng-click="showme=true" type="button" name="button" class="btn">Gerar QR Pet</button>
+
                   </div>
                   <input id="text" type="text" value="" ng-model="nome + telefone + endereco + nomeb + raca + tamanho + cor" placeholder="Resultado" />
                 </div>
@@ -167,14 +168,20 @@
         </div>
         <canvas id="canvas" width="300px" height="300px"></canvas>
         <br>
-        <img id="imagem" width="300px" height="300px" />
+        <img id="imagem" ng-show="showme" width="300px" height="300px" />
 
       </div>
     </div>
   </div>
   </div>
 
+<button ng-click="showm=true">Hide</button>
+  Show HTML: <input type="checkbox" ng-model="myVar" name="myVar" id="myVar">
 
+  <div ng-show="myVar">
+  <h1>Welcome</h1>
+  <p>Welcome to my home.</p>
+  </div>
 
   <footer>
     <div class="rodape">

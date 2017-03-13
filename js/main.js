@@ -6,11 +6,6 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 
 function makeCode () {
   var elText = document.getElementById("text");
-  if (!elText.value) {
-    //alert("Digite um texto");
-    //elText.focus();
-    return;
-  }
 
   qrcode.makeCode(elText.value);
   //alert("criado");
@@ -31,16 +26,4 @@ makeCode();
 
 $("#tey").click(function() {
   makeCode();
-});
-
-
-
-$("#text").on("blur", function () {
-  makeCode();
-}).
-
-on("keydown", function (e) {
-  if (e.keyCode == 13) {
-    makeCode();
-  }
 });
