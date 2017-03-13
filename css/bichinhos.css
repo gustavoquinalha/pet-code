@@ -132,22 +132,31 @@ background: #efefef
 display: flex;
 justify-content: space-between;
 align-items: center;
+flex-direction: column;
 flex-wrap: wrap;
 padding-top: 50px;
 padding-bottom: 30px;
 }
 .fle {
 flex-grow: 1;
+width: 100%;
 }
 .fe {
-flex-basis: 500px
+
 }
 .fd {
-flex-basis: 200px
+
 }
 .nov {
 width: 90%;
 margin: 0 auto;
+}
+.forms {
+display: flex;
+}
+.form {
+flex: 1;
+margin: 10px;
 }
 .form h2 {
 text-align: left;
