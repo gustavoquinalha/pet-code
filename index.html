@@ -1,44 +1,39 @@
 <!DOCTYPE>
-<html ng-app nxmlns="http://www.w3.g-app org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<html data-ng-app="BeMEAN" nxmlns="http://www.w3.g-app org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 
 <head>
-  <title>Bichinhos - Qr pets</title>
+  <title>Bichinhos - Pet Code</title>
   <link rel="stylesheet" href="css/bichinhos.css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-  <meta name="description" content="Bichinhos - Qr pets">
+  <meta name="description" content="Bichinhos - Pet Code">
   <link rel="canonical" href="http://">
   <meta name="author" content="bichinhos">
   <meta name="robots" content="index">
 
-  <meta property="og:title" content="Bichinhos - Qr pets" />
+  <meta property="og:title" content="Bichinhos - Pet Code" />
   <meta property="fb:app_id" content="1154262757941899" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://" />
   <meta property="og:image" content="http://" />
-  <meta property="og:description" content="Bichinhos - Qr pets" />
+  <meta property="og:description" content="Bichinhos - Pet Code" />
   <meta property="og:site_name" content="bichinhos" />
   <meta property="fb:admins" content="100002787447461" />
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Bichinhos - Qr pets">
-  <meta name="twitter:description" content="Bichinhos - Qr pets">
+  <meta name="twitter:title" content="Bichinhos - Pet Code">
+  <meta name="twitter:description" content="Bichinhos - Pet Code">
   <meta name="twitter:creator" content="@gustavoquinalha">
   <meta name="twitter:image" content="http://">
 
   <!-- Schema.org markup for Google+ -->
-  <meta itemprop="name" content="Bichinhos - Qr pets">
-  <meta itemprop="description" content="Bichinhos - Qr pets">
+  <meta itemprop="name" content="Bichinhos - Pet Code">
+  <meta itemprop="description" content="Bichinhos - Pet Code">
   <meta itemprop="image" content="http://">
-
-
-
-
 
 </head>
 
-<body>
-
+<body data-ng-controller="UserController">=
   <div class="bg">
     <div class="texto">
       <img src="img/logo.svg" class="logo" alt="">
@@ -104,19 +99,19 @@
         <div class="fle fe" id="forms" ng-hide="showm">
           <div class="nov">
 
-            <form class="">
+            <form name="myForm">
               <div class="forms">
 
                 <div class="form">
                   <h2>Seus dados</h2>
                   <div class="formu">
-                    <span>Qual o seu nome?</span>
-                    <input type="text" ng-model="nome" class="inp" placeholder="Ex: João">
+                    <span>Qual o seu nome? <i>*</i></span>
+                    <input type="text" ng-model="nome" class="inp" placeholder="Ex: João" required>
                   </div>
 
                   <div class="formu">
-                    <span>Qual seu telefone?</span>
-                    <input type="phone" ng-model="telefone" class="inp" placeholder="Ex: (44) 99999-9999">
+                    <span>Qual seu telefone? <i>*</i></span>
+                    <input type="phone" ng-model="telefone" class="inp" placeholder="Ex: (44) 99999-9999" required>
                   </div>
 
                   <div class="formu">
@@ -148,7 +143,7 @@
                   </div>
 
                   <div class="formu">
-                    <button id="tey" ng-model="myVar" ng-click="showme=true; showm=true" type="button" name="button" class="btn">Gerar QR Pet</button>
+                    <button id="tey" ng-disabled="myForm.$invalid" ng-model="myVar" ng-click="showme=true; showm=true" type="button" name="button" class="btn formPage">Gerar QR Pet</button>
 
                   </div>
                   <input id="text" type="text" class="some" value="" ng-model="nome + telefone + endereco + nomeb + raca + tamanho + cor" placeholder="Resultado" />
@@ -160,8 +155,14 @@
         </div>
         <div class="fle fd" ng-show="showme">
           <div class="nov">
-
-            <div id="svg" class="">
+            <div class="voltar">
+              <button ng-click="showme=false; showm=false" type="button" name="button" class="bb">
+                < Voltar</button>
+            </div>
+            <h2 class="eba">EBAAAAA você criou seu pet code, agora seu bichinho está mais seguro :)</h2>
+            <p>Nome: {{ nome }}, telefone: {{ telefone }}, endereco: {{ endereco }}, nomeb: {{ nomeb }}, raca: {{ raca }}, tamanho: {{ tamanho }}, cor: {{ cor }}.
+            </p>
+            <div id="svg" class="some">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
                 <g id="qrcode" />
               </svg>
@@ -170,7 +171,8 @@
             <br>
             <img id="imagem" width="300px" height="300px" />
             <br>
-            <button ng-click="showme=false; showm=false" type="button" name="button" class="btn">Voltar</button>
+            <!--a href="#" class="bb">Criar novo PET CODE</a-->
+            <button ng-click="showme=false; showm=false" type="button" name="button" class="bb">Criar novo PET CODE</button>
           </div>
         </div>
       </div>
@@ -184,10 +186,6 @@
     </footer>
 
   </div>
-
-
-
-
 
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular-routes.js"></script>
