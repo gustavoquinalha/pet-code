@@ -33,31 +33,46 @@
   <link rel="stylesheet" href="css/bichinhos.css">
 
 </head>
+
 <body>
   <div class="bg">
-  <div class="texto">
-    <img src="img/logo.svg" class="logo" alt=""><br>
-    <img src="img/intro.svg" class="intro" width="300" alt="">
+    <div class="texto">
+      <img src="img/logo.svg" class="logo" alt="">
+      <br>
+      <img src="img/intro.svg" class="intro" width="300" alt="">
+    </div>
+  </div>
+  <div class="flecha">
+    <div class="fl">
+      <img src="img/pata.svg" width="50" alt="" />
+    </div>
   </div>
 
+  <h1>O jeitinho mais fofinho de manter seu bichinho seguro.</h1>
+  <form class="">
+    <p>Nome:
+      <input type="text" ng-model="name">
+    </p>
+    <p>Raça:
+      <input type="text" ng-model="raca">
+    </p>
+    <p>sexo:
+      <input type="text" ng-model="sexo">
+    </p>
+    <input id="text" type="text" value="teste" ng-model="name + raca + sexo" placeholder="teste" />
+    <br>
+    <br>
+    <button id="tey" type="button" name="button">TEY</button>
+  </form>
+  <div id="svg">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
+      <g id="qrcode" />
+    </svg>
   </div>
-
-<h1>O jeitinho mais fofinho de manter seu bichinho seguro.</h1>
-<form class="">
-  <p>Nome: <input type="text" ng-model="name"></p>
-  <p>Raça: <input type="text" ng-model="raca"></p>
-  <p>sexo: <input type="text" ng-model="sexo"></p>
-  <input id="text" type="text" value="teste" ng-model="name + raca + sexo" placeholder="teste"/><br><br>
-  <button id="tey" type="button" name="button">TEY</button>
-</form>
-<div id="svg">
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
-    <g id="qrcode"/>
-  </svg>
-</div>
-<br>
-<canvas id="canvas" width="300px" height="300px"></canvas><br>
-<img id="imagem" class="full" width="300px" height="300px"/>
+  <br>
+  <canvas id="canvas" width="300px" height="300px"></canvas>
+  <br>
+  <img id="imagem" class="full" width="300px" height="300px" />
 
 
 
@@ -65,14 +80,13 @@
 
 
 
-<script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/qrcode.js"></script>
-<script type="text/javascript" src="js/rgbcolor.js"></script>
-<script type="text/javascript" src="js/canvg.js"></script>
-<script type="text/javascript" src="js/main.js">
-
-</script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/qrcode.js"></script>
+  <script type="text/javascript" src="js/rgbcolor.js"></script>
+  <script type="text/javascript" src="js/canvg.js"></script>
+  <script type="text/javascript" src="js/main.js">
+  </script>
 
 
 </body>

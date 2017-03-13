@@ -13,7 +13,7 @@ a {
 
 html,body {
   background: #fff;
-  height: 100%;
+  height: 100vh;
 }
 .logo {
 width: 150px;
@@ -23,7 +23,7 @@ width: 350px;
 }
 .bg {
 width: 100%;
-height: 100%;
+height: 100vh;
 background-color: #fff;
 background: #fff;
 background: url(../img/3.jpg) 100%;
@@ -31,9 +31,15 @@ background-position: right bottom;
 background-size: 60%;
 background-repeat: no-repeat;
 background-origin: border-box;
+display: -webkit-box;
+display: -ms-flexbox;
 display: flex;
-justify-content: flex-start;
-align-items:center;
+-webkit-box-pack: start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+-webkit-box-align:center;
+    -ms-flex-align:center;
+        align-items:center;
 color: #4680FF;
 overflow: hidden;
 
@@ -41,7 +47,7 @@ overflow: hidden;
 .texto{
 width: 400px;
 max-width: 90%;
-margin-left: 10%;
+margin-left: 10vw;
 text-align: center!important;
 }
 .texto img {
@@ -49,16 +55,26 @@ padding: 0;
 margin: 0 auto;
 }
 
-
+.flecha {
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 10px;
+}
+.fl {
+  position: absolute;
+  bottom: 20px;
+  width: 90%;
+}
 @media only screen and (max-width: 480px) {
   .logo {
-  width: 100px;
+  width: 50vw
   }
   .intro {
-  width: 150px;
+  height: 50vh;
+  width: auto
   }
   .bg {
-  height: 50%;
   background: #fff!important
   }
   .texto{

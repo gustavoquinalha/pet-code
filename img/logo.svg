@@ -6,15 +6,15 @@
 	.st0{display:none;fill:#FFFFFF;stroke:#211915;stroke-miterlimit:10;}
 	.st1{display:none;}
 	.st2{display:inline;}
-	.st3{fill:#4680FF;}
-	.st4{fill:none;stroke:#4680FF;stroke-width:15;stroke-miterlimit:10;}
-	.st5{fill:none;stroke:#4680FF;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st6{display:none;fill:#4680FF;}
+	.st3{fill:#0074FF;}
+	.st4{fill:none;stroke:#0074FF;stroke-width:15;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#0074FF;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st6{display:none;fill:#0074FF;}
 	.st7{font-family:'DumentoRoundedFREE';}
 	.st8{font-size:155.09px;}
 	.st9{letter-spacing:-4;}
-	.st10{display:none;fill:#B2328E;}
-	.st11{display:inline;fill:#CD42EA;}
+	.st10{display:none;fill:#0074FF;}
+	.st11{display:inline;fill:#0074FF;}
 </style>
 <rect x="-650.5" y="-567.5" class="st0" width="1876" height="1636.7"/>
 <g>
