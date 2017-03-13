@@ -28,7 +28,7 @@ background-color: #fff;
 background: #fff;
 background: url(../img/3.jpg) 100%;
 background-position: right bottom;
-background-size: 60%;
+background-size: contain;
 background-repeat: no-repeat;
 background-origin: border-box;
 display: -webkit-box;
@@ -44,6 +44,9 @@ color: #4680FF;
 overflow: hidden;
 
 }
+.esp {
+height: 20px;;
+}
 .texto{
 width: 400px;
 max-width: 90%;
@@ -54,25 +57,139 @@ text-align: center!important;
 padding: 0;
 margin: 0 auto;
 }
-
+.tamanho {
+width: 1400px;
+max-width: 90%;
+margin: 0 auto;
+}
 .flecha {
   width: 100px;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 10px;
 }
 .fl {
   position: absolute;
   bottom: 20px;
   width: 90%;
 }
+footer {
+background: #fff
+}
+.rodape {
+margin-top: 10px;
+padding-top: 50px;
+padding-bottom: 50px;
+color: #4680FF;
+}
+.di {
+background: #4680FF;
+padding-top: 50px;
+padding-bottom: 30px;;;
+}
+.int {
+display: flex;
+flex-wrap: wrap;
+}
+.in {
+flex-grow: 1;
+flex-basis: 300px;
+color: #fff
+}
+.ci {
+width: 150px;
+height: 150px;
+border: 1px solid #fff;
+border-radius: 50%;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.cimm {
+color: rgba(255, 255, 255, 0.7);
+width: 250px;
+margin: 0 auto;
+padding-bottom: 20px;
+padding-top: 10px;
+}
+.cimm h2 {
+font-size: 20px;
+color: rgba(255, 255, 255, 0.9);
+}
+.cn {
+background: #fff;
+text-align: left;
+}
+.cor {
+background: #efefef
+}
+.flex {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+padding-top: 50px;
+padding-bottom: 30px;
+}
+.fle {
+flex-grow: 1;
+}
+.fe {
+flex-basis: 500px
+}
+.fd {
+flex-basis: 200px
+}
+.nov {
+width: 90%;
+margin: 0 auto;
+}
+.form h2 {
+text-align: left;
+color: #4680FF;
+border-bottom: 3px solid #4680FF;
+margin-bottom: 20px;
+}
+.formu {
+text-align: left;
+padding-bottom: 20px;
+}
+.formu span {
+font-weight: bold;
+font-size: 20px;
+color: rgba(0, 0, 0, 0.5);
+}
+.inp {
+width: 100%;
+text-align: left;
+font-size: 20px;
+height: 40px;
+padding-left: 5px;
+border-radius: 4px;
+box-shadow: none;
+outline: none;
+border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.btn {
+width: 100%;
+background: #4680FF;
+color: #fff;
+border: none;
+outline: none;
+font-size: 20px;
+height: 50px;
+border-radius: 4px;
+cursor: pointer;
+}
+.btn:hover {
+background: #3265d3;
+}
 @media only screen and (max-width: 480px) {
   .logo {
-  width: 50vw
+  width: 100px
   }
   .intro {
-  height: 50vh;
-  width: auto
+  width: 300px;
   }
   .bg {
   background: #fff!important

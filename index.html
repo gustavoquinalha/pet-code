@@ -1,8 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE>
 <html ng-app nxmlns="http://www.w3.g-app org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 
 <head>
-  <title>QR code</title>
+  <title>Bichinhos - Qr pets</title>
+  <link rel="stylesheet" href="css/bichinhos.css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
   <meta name="description" content="Bichinhos - Qr pets">
@@ -30,11 +31,14 @@
   <meta itemprop="description" content="Bichinhos - Qr pets">
   <meta itemprop="image" content="http://">
 
-  <link rel="stylesheet" href="css/bichinhos.css">
+
+
+
 
 </head>
 
 <body>
+
   <div class="bg">
     <div class="texto">
       <img src="img/logo.svg" class="logo" alt="">
@@ -44,51 +48,153 @@
   </div>
   <div class="flecha">
     <div class="fl">
-      <img src="img/pata.svg" width="50" alt="" />
+      <img src="img/flecha.svg" width="50" alt="" />
     </div>
   </div>
-
-  <h1>O jeitinho mais fofinho de manter seu bichinho seguro.</h1>
-  <form class="">
-    <p>Nome:
-      <input type="text" ng-model="name">
-    </p>
-    <p>Raça:
-      <input type="text" ng-model="raca">
-    </p>
-    <p>sexo:
-      <input type="text" ng-model="sexo">
-    </p>
-    <input id="text" type="text" value="teste" ng-model="name + raca + sexo" placeholder="teste" />
-    <br>
-    <br>
-    <button id="tey" type="button" name="button">TEY</button>
-  </form>
-  <div id="svg">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
-      <g id="qrcode" />
-    </svg>
+<div class="di">
+  <div class="tamanho">
+    <div class="int">
+      <div class="in">
+        <div class="cim">
+          <div class="ci">
+            <div class="">
+              <img src="/img/btn.svg" width="60" alt="">
+            </div>
+          </div>
+        </div>
+      <div class="cimm">
+        <h2>Cadastre</h2>
+        <p>Cadastre os seus dados e do seu animal,<wbr>e gere seu QR PET</p>
+      </div>
+      </div>
+      <div class="in">
+        <div class="cim">
+          <div class="ci">
+            <div class="">
+              <img src="/img/print.svg" width="60" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="cimm">
+          <h2>Imprima</h2>
+          <p>O próximo passo é imprimir e estilzar a coleira do seu bichinho</p>
+        </div>
+      </div>
+      <div class="in">
+        <div class="cim">
+          <div class="ci">
+            <div class="">
+              <img src="/img/p.svg" width="60" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="cimm">
+          <h2>Prontoooo!</h2>
+          <p>Prontinho! Agora seu bichinho está mais seguro</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <br>
-  <canvas id="canvas" width="300px" height="300px"></canvas>
-  <br>
-  <img id="imagem" class="full" width="300px" height="300px" />
+</div>
+<div class="cor">
+
+  <div class="tamanho cn">
+  <div class="flex">
+    <div class="fle fe">
+      <div class="nov">
+        <div class="form">
+          <form class="">
+            <h2>Seus dados</h2>
+              <div class="forms">
+                <div class="formu">
+                    <span>Qual o seu nome?</span>
+                    <input type="text" ng-model="nome" class="inp" placeholder="Nome">
+                </div>
+
+                <div class="formu">
+                    <span>Qual seu telefone?</span>
+                    <input type="phone" ng-model="telefone" class="inp" placeholder="Telefone">
+                </div>
+
+                <div class="formu">
+                    <span>Qual seu endereco?</span>
+                    <input type="adress" ng-model="endereco" class="inp" placeholder="Endereco">
+                </div>
+
+              </div>
+
+              <div class="esp">
+
+              </div>
+              <h2>Os dados do bichinho</h2>
+                <div class="forms">
+                  <div class="formu">
+                      <span>Nome do bichinho</span>
+                      <input type="text" ng-model="nomeb" class="inp" placeholder="Nome">
+                  </div>
+
+                  <div class="formu">
+                      <span>Raça</span>
+                      <input type="phone" ng-model="raca" class="inp" placeholder="Telefone">
+                  </div>
+
+                  <div class="formu">
+                      <span>Tamanho</span>
+                      <input type="phone" ng-model="tamanho" class="inp" placeholder="Telefone2">
+                  </div>
+
+                  <div class="formu">
+                      <span>Cor</span>
+                      <input type="adress" ng-model="cor" class="inp" placeholder="Endereco">
+                  </div>
+
+                  <div class="formu">
+                    <button id="tey" type="button" name="button" class="btn">Gerar QR Pet</button>
+                  </div>
+
+                </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="fle fd">
+      <div class="nov">
+        <input id="text" type="text" value="teste" ng-model="nome + telefone + endereco + nomeb + raca + tamanho + cor" placeholder="teste" />
+        <div id="svg">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
+            <g id="qrcode" />
+          </svg>
+        </div>
+        <canvas id="canvas" width="300px" height="300px"></canvas>
+        <br>
+        <img id="imagem" class="full" width="300px" height="300px" />
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <footer>
+    <div class="rodape">
+      Criado com muito <img src="/img/love.svg" width="20" alt=""> pelos bichinhos.
+    </div>
+  </footer>
+
+</div>
 
 
 
 
 
-
-
-  <script type="text/javascript" src="js/angular.min.js"></script>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/qrcode.js"></script>
-  <script type="text/javascript" src="js/rgbcolor.js"></script>
-  <script type="text/javascript" src="js/canvg.js"></script>
-  <script type="text/javascript" src="js/main.js">
-  </script>
-
-
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/qrcode.js"></script>
+<script type="text/javascript" src="js/rgbcolor.js"></script>
+<script type="text/javascript" src="js/canvg.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
