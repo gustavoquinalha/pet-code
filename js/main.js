@@ -8,7 +8,7 @@ function makeCode () {
   var elText = document.getElementById("text");
   if (!elText.value) {
     //alert("Digite um texto");
-    elText.focus();
+    //elText.focus();
     return;
   }
 
