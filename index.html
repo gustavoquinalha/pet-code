@@ -105,7 +105,7 @@
         <div class="form">
           <form class="">
             <h2>Seus dados</h2>
-              <div class="forms">
+              <div class="forms" id="forms">
                 <div class="formu">
                     <span>Qual o seu nome?</span>
                     <input type="text" ng-model="nome" class="inp" placeholder="Nome">
@@ -145,13 +145,13 @@
 
                   <div class="formu">
                       <span>Cor</span>
-                      <input type="adress" ng-model="cor" class="inp" placeholder="Endereco">
+                      <input type="adress" ng-model="cor" id="cor" class="inp" placeholder="Endereco">
                   </div>
 
                   <div class="formu">
                     <button id="tey" type="button" name="button" class="btn">Gerar QR Pet</button>
                   </div>
-
+                  <input id="text" type="text" value="" ng-model="nome + telefone + endereco + nomeb + raca + tamanho + cor" placeholder="Resultado" />
                 </div>
           </form>
         </div>
@@ -159,15 +159,15 @@
     </div>
     <div class="fle fd">
       <div class="nov">
-        <input id="text" type="text" value="teste" ng-model="nome + telefone + endereco + nomeb + raca + tamanho + cor" placeholder="teste" />
-        <div id="svg">
+
+        <div id="svg" class="some">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
             <g id="qrcode" />
           </svg>
         </div>
         <canvas id="canvas" width="300px" height="300px"></canvas>
         <br>
-        <img id="imagem" class="full" width="300px" height="300px" />
+        <img id="imagem" width="300px" height="300px" />
 
       </div>
     </div>
@@ -182,6 +182,17 @@
     </div>
   </footer>
 
+  <form name="form" class="css-form" novalidate>
+    <div>
+      <label>
+        Overwritten Email:
+        <input type="email" ng-model="myEmail" overwrite-email name="overwrittenEmail" />
+      </label>
+      <span ng-show="form.overwrittenEmail.$error.email">This email format is invalid!</span><br>
+      Model: {{myEmail}}
+      </div>
+  </form>
+
 </div>
 
 
@@ -189,6 +200,7 @@
 
 
 <script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-routes.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/qrcode.js"></script>

@@ -10,7 +10,9 @@ text-align: center;
 a {
   text-decoration: none;
 }
-
+img {
+   border: none;
+}
 html,body {
   background: #fff;
   height: 100vh;
@@ -20,6 +22,9 @@ width: 150px;
 }
 .intro {
 width: 350px;
+}
+.some {
+display: none;
 }
 .bg {
 width: 100%;
