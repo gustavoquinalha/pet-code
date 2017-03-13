@@ -1,5 +1,11 @@
 angular.module('BeMEAN', [])
-  .controller('UserController', [ '$scope', function($scope){
-      $scope.titulo = "Be MEAN";
-    }
-  ]);
+     .controller('UserController', UserController);
+
+
+
+   function UserController() {
+     var vm = this;
+     vm.users = [
+       {name: 'teste', email: 'teste@teste.com'}
+     ];
+   }

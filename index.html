@@ -106,16 +106,24 @@
                   <h2>Seus dados</h2>
                   <div class="formu">
                     <span>Qual o seu nome? <i>*</i></span>
-                    <input type="text" ng-model="nome" class="inp" placeholder="Ex: João" required>
+                    <input type="text" ng-model="nome" name="nome" class="inp" placeholder="Ex: João" required>
+                    <span ng-show="myForm.nome.$touched && myForm.nome.$invalid">Seu nome é obrigatório.</span>
                   </div>
 
                   <div class="formu">
                     <span>Qual seu telefone? <i>*</i></span>
-                    <input type="phone" ng-model="telefone" class="inp" placeholder="Ex: (44) 99999-9999" required>
+                    <input type="phone" ng-model="telefone" name="telefone" ng-minlength="10" class="inp" placeholder="Ex: 44999999999" required>
+                    <span ng-show="myForm.telefone.$touched && myForm.telefone.$invalid">Número inválido.</span>
                   </div>
 
                   <div class="formu">
-                    <span>Qual seu endereco?</span>
+                    <span>Telefone 2</span>
+                    <input type="phone" ng-model="telefoned" name="telefoned" ng-minlength="10"  class="inp" placeholder="Ex: 44999999999">
+                    <span ng-show="myForm.telefoned.$touched && myForm.telefoned.$invalid">Número inválido.</span>
+                  </div>
+
+                  <div class="formu">
+                    <span>Qual seu endereço e número?</span>
                     <input type="adress" ng-model="endereco" class="inp" placeholder="Ex: Rua dos bichinhos 123">
                   </div>
 
@@ -123,23 +131,23 @@
                 <div class="form">
                   <h2>Os dados do bichinho</h2>
                   <div class="formu">
-                    <span>Nome do bichinho</span>
+                    <span>Nome do bichinho <i>*</i></span>
                     <input type="text" ng-model="nomeb" class="inp" placeholder="Ex: Jozelito">
                   </div>
 
                   <div class="formu">
-                    <span>Raça</span>
-                    <input type="text" ng-model="raca" class="inp" placeholder="Ex: Vira-lata">
+                    <span>Qual a raça? <i>*</i></span>
+                    <input type="text" ng-model="raca" class="inp" placeholder="Ex: Vira-lata" required>
                   </div>
 
                   <div class="formu">
-                    <span>Tamanho/Porte</span>
-                    <input type="text" ng-model="tamanho" class="inp" placeholder="Ex: Médio">
+                    <span>Qual o tamanho/porte? <i>*</i></span>
+                    <input type="text" ng-model="tamanho" class="inp" placeholder="Ex: Médio" required>
                   </div>
 
                   <div class="formu">
-                    <span>Cor</span>
-                    <input type="text" ng-model="cor" id="cor" class="inp" placeholder="Ex: Branco/Marrom">
+                    <span>Qual a cor? <i>*</i></span>
+                    <input type="text" ng-model="cor" id="cor" class="inp" placeholder="Ex: Branco/Marrom" required>
                   </div>
 
                   <div class="formu">
@@ -159,9 +167,7 @@
               <button ng-click="showme=false; showm=false" type="button" name="button" class="bb">
                 < Voltar</button>
             </div>
-            <h2 class="eba">EBAAAAA você criou seu pet code, agora seu bichinho está mais seguro :)</h2>
-            <p>Nome: {{ nome }}, telefone: {{ telefone }}, endereco: {{ endereco }}, nomeb: {{ nomeb }}, raca: {{ raca }}, tamanho: {{ tamanho }}, cor: {{ cor }}.
-            </p>
+
             <div id="svg" class="some">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svgg">
                 <g id="qrcode" />
@@ -170,6 +176,10 @@
             <canvas id="canvas" width="300px" height="300px"></canvas>
             <br>
             <img id="imagem" width="300px" height="300px" />
+            <br>
+            <!--h2 class="eba">EBAAAAA você criou seu pet code, agora seu bichinho está mais seguro :)</h2-->
+            <p>Nome: {{ nome }}, telefone: {{ telefone }}, endereco: {{ endereco }}, nomeb: {{ nomeb }}, raca: {{ raca }}, tamanho: {{ tamanho }}, cor: {{ cor }}.
+            </p>
             <br>
             <!--a href="#" class="bb">Criar novo PET CODE</a-->
             <button ng-click="showme=false; showm=false" type="button" name="button" class="bb">Criar novo PET CODE</button>
@@ -181,19 +191,18 @@
 
     <footer>
       <div class="rodape">
-        Criado com muito <img src="img/love.svg" width="20" alt=""> pelos bichinhos.
+        Criado com muito <img src="img/love.svg" width="20" alt=""> para os bichinhos.
       </div>
     </footer>
 
   </div>
 
   <script type="text/javascript" src="js/angular.min.js"></script>
-  <script type="text/javascript" src="js/angular-routes.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/qrcode.js"></script>
-  <script type="text/javascript" src="js/rgbcolor.js"></script>
-  <script type="text/javascript" src="js/canvg.js"></script>
+  <!--script type="text/javascript" src="js/rgbcolor.js"></script-->
+  <script type="text/javascript" src="js/canvg.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 
