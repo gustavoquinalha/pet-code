@@ -29,18 +29,12 @@ $("#tey").click(function() {
 
 $('#forms').keypress(function(ev) {
     if (ev.which === 13) {
-  $('#tey').click();
+      makeCode();
 }
-
 });
 
 
 
 $("#text").on("blur", function () {
   makeCode();
-}).
-on("keydown", function (e) {
-  if (e.keyCode == 13) {
-    makeCode();
-  }
 });
