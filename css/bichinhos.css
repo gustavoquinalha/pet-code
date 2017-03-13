@@ -33,7 +33,7 @@ background-color: #fff;
 background: #fff;
 background: url(../img/3.jpg) 100%;
 background-position: right bottom;
-background-size: contain;
+background-size: 70%;
 background-repeat: no-repeat;
 background-origin: border-box;
 display: -webkit-box;
