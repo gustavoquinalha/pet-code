@@ -39,9 +39,8 @@ $('#forms').keypress(function(ev) {
 $("#text").on("blur", function () {
   makeCode();
 }).
-
-//on("keydown", function (e) {
-  //if (e.keyCode == 13) {
-  //  makeCode();
-//  }
-//});
+on("keydown", function (e) {
+  if (e.keyCode == 13) {
+    makeCode();
+  }
+});
