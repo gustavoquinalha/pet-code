@@ -8,7 +8,6 @@ function makeCode () {
   var elText = document.getElementById("text");
 
   qrcode.makeCode(elText.value);
-  //alert("criado");
   //event.preventDefault();
   //Convertendo svg em canvas
   var canvas = document.getElementById("canvas");
@@ -27,3 +26,22 @@ makeCode();
 $("#tey").click(function() {
   makeCode();
 });
+
+$('#forms').keypress(function(ev) {
+    if (ev.which === 13) {
+  $('#tey').click();
+}
+
+});
+
+
+
+$("#text").on("blur", function () {
+  makeCode();
+}).
+
+//on("keydown", function (e) {
+  //if (e.keyCode == 13) {
+  //  makeCode();
+//  }
+//});
